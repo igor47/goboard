@@ -84,7 +84,7 @@ class GoBoard(object):
     lspace = self.linewidth + self.length_spacing
 
     for point in self.star_points:
-      center = (grid_start[0] + point[0] * wspace, grid_start[0] + point[1] * lspace)
+      center = (grid_start[0] + point[0] * wspace, grid_start[1] + point[1] * lspace)
       self.draw_starpoint(center)
 
   def draw_lines(self, start, count, direction, width, length, spacing):
