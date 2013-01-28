@@ -1,6 +1,6 @@
 # goboard #
 
-`goboard.py` generates an svg file for a [go board](http://en.wikipedia.org/wiki/Go_(game)#Boards).
+`goboard.py` generates an svg file for a [go board](http://en.wikipedia.org/wiki/Go_\(game\)#Boards).
 The resulting file is suitable to print your own board.
 I used it on wood with a [laser cutter](http://en.wikipedia.org/wiki/Laser_cutting) to create a beautiful handmade board.
 This is also a great example of how to use the [svgwrite](http://pypi.python.org/pypi/svgwrite/) library in python to create simple graphics.
