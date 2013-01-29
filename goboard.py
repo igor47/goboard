@@ -57,7 +57,7 @@ class GoBoard(object):
 
     # create an initial rectangle around the drawing
     stroke = "black" if draw_border else "white"
-    border = drawing.rect(size=(self.width, self.length), stroke = stroke, fill = 'white')
+    border = drawing.rect(size=(self.width, self.length), stroke = stroke, stroke_width = 1.3, fill = 'white')
     drawing.add(border)
 
     # how much room from the edge to the first horizontal line?
@@ -136,9 +136,12 @@ def main():
       help="Size of go board to generate")
   parser.add_argument("-o", "--output", default="goboard.svg",
       help="Output filename")
+  parser.add_argument("-b", "--border", default=False, action="store_true",
+      help="Draw a border around the entire image?")
 
   opts = parser.parse_args()
   b = GoBoard(**Sizes[opts.size])
+  b.draw(opts.border)
   b.write(opts.output)
 
 if __name__ == "__main__":
